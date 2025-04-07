@@ -33,7 +33,7 @@ cd Python-for-Data-Engineering
 Run an exercise:
 
 ```bash
-python strings/extract_vowels.py
+python 01_strings/extract_vowels.py
 ```
 
 ---
