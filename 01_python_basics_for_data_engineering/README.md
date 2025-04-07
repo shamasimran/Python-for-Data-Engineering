@@ -10,7 +10,7 @@ These scripts focus on string manipulation, data structures, file handling, erro
 
 | Category         | Exercise Description                      | File                                  |
 |------------------|-------------------------------------------|----------------------------------------|
-| Strings          | Extract vowels from a string              | `01_strings/extract_vowels.py` (https://github.com/shamasimran/Python-for-Data-Engineering/blob/main/01_python_basics_for_data_engineering/01_strings/extract_vowels_README.md)           |
+| Strings          | Extract vowels from a string              | [01_strings/extract_vowels.py](https://github.com/shamasimran/Python-for-Data-Engineering/blob/main/01_python_basics_for_data_engineering/01_strings/extract_vowels_README.md)           |
 | Lists            | Flatten a nested list                     | `02_lists/flatten_nested_list.py`        |
 | Dictionaries     | Count word frequency in a text            | `03_dicts/frequency_counter.py`          |
 | Functions        | Validate an email address                 | `04_functions/validate_email.py`         |
