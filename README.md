@@ -8,7 +8,7 @@ This repository contains resources and code examples to help you get started wit
 - [Getting Started](#getting-started)
 - [Repository Structure](#repository-structure)
 - [Contributing](#contributing)
-- [License](#license)
+- [Contact](#Contact)
 
 ## Introduction
 
@@ -50,6 +50,8 @@ Contributions are welcome! If you'd like to contribute, please follow these step
 4. Push your changes to your fork.
 5. Submit a pull request detailing your changes.
 
-## License
+## 📬 Contact
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+Feel free to connect on [LinkedIn](https://www.linkedin.com/in/shamasimran/) or open an issue for suggestions!
+
+---
