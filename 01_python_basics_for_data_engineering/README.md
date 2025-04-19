@@ -10,14 +10,14 @@ These scripts focus on string manipulation, data structures, file handling, erro
 
 | Category         | Exercise Description                      | File                                  |
 |------------------|-------------------------------------------|----------------------------------------|
-| Strings          | Extract vowels from a string              | `strings/extract_vowels.py`           |
-| Lists            | Flatten a nested list                     | `lists/flatten_nested_list.py`        |
-| Dictionaries     | Count word frequency in a text            | `dicts/frequency_counter.py`          |
-| Functions        | Validate an email address                 | `functions/validate_email.py`         |
-| File I/O         | Read/write CSV files                      | `files/read_write_csv.py`             |
-| Error Handling   | Safe division with error handling         | `error_handling/divide_numbers.py`    |
-| Datetime         | Convert date from one format to another   | `datetime/convert_date_format.py`     |
-| Comprehensions   | Square even numbers using list comp       | `comprehensions/square_even_numbers.py` |
+| Strings          | Extract vowels from a string              | [01_strings/extract_vowels.py](https://github.com/shamasimran/Python-for-Data-Engineering/blob/main/01_python_basics_for_data_engineering/01_strings/extract_vowels_README.md)           |
+| Lists            | Flatten a nested list                     | `02_lists/flatten_nested_list.py`        |
+| Dictionaries     | Count word frequency in a text            | `03_dicts/frequency_counter.py`          |
+| Functions        | Validate an email address                 | `04_functions/validate_email.py`         |
+| File I/O         | Read/write CSV files                      | `05_files/read_write_csv.py`             |
+| Error Handling   | Safe division with error handling         | `06_error_handling/divide_numbers.py`    |
+| Datetime         | Convert date from one format to another   | `07_datetime/convert_date_format.py`     |
+| Comprehensions   | Square even numbers using list comp       | `08comprehensions/square_even_numbers.py`|
 
 ---
 
@@ -33,7 +33,7 @@ cd Python-for-Data-Engineering
 Run an exercise:
 
 ```bash
-python strings/extract_vowels.py
+python 01_strings/extract_vowels.py
 ```
 
 ---
