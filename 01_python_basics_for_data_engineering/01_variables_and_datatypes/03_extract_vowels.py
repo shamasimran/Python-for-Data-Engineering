@@ -10,6 +10,5 @@ for char in text:
         result.append(char)
 """
 
-
 if __name__ == "__main__":
     print(extract_vowels("Data Engineering with Python"))
