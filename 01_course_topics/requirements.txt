@@ -1,2 +1,0 @@
-# No external dependencies yet
-# Feel free to add any requirements as you go along

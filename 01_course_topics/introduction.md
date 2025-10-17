@@ -197,3 +197,31 @@ Behind the scenes:
 
 ---
 
+---
+
+## 📌 Why This Repo?
+
+Before diving into data pipelines, cloud, and big data frameworks like PySpark or Airflow, it's essential to:
+- Write clean, testable Python code
+- Understand core logic patterns
+- Work with files and dates
+- Handle exceptions gracefully
+
+This repo is your warm-up lap before the real data engineering marathon. 🏁
+
+---
+
+## 🧩 Next Steps
+
+After completing these basics, continue with:
+- Week 2: Data cleaning with `pandas`
+- Week 3: ETL with APIs and databases
+- Week 4+: Real-time & batch data pipelines
+
+---
+
+## 📬 Contact
+
+Feel free to connect on [LinkedIn](https://www.linkedin.com/in/shamasimran/) or open an issue for suggestions!
+
+---
