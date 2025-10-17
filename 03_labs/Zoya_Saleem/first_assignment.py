@@ -1,6 +1,6 @@
 # First Python Assignment
-# Author: Your Name
-# Date: YYYY-MM-DD
+# Author: Zoya Saleem
+# Date: 2025-10-17
 
 # This program takes a user's name and age, then prints a personalized message.
 
