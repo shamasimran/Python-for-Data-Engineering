@@ -1,4 +1,5 @@
 import csv
+import os
 
 def write_csv(data, filename):
     with open(filename, 'w', newline='') as f:
@@ -14,3 +15,12 @@ if __name__ == "__main__":
     data = [["name", "age"], ["John", 28], ["Jane", 22]]
     write_csv(data, "example.csv")
     print(read_csv("example.csv"))
+    # Delete a File    
+    os.remove("demofile.txt")
+
+    if os.path.exists("demofile.txt"):
+        os.remove("demofile.txt")
+    else:
+        print("The file does not exist")
+
+    os.rmdir("myfolder")
