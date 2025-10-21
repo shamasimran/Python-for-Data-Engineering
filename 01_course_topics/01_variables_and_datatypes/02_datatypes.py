@@ -1,3 +1,4 @@
+
 l = str("Hello World")  # l = "Hello World" str
 m = int(20)  # m = 20 int
 n = float(20.5)  # n = 20.5 float

@@ -2,7 +2,7 @@
 # while loop does not automatically create or update a counter.
 # You have to declare i yourself and manually update it (i += 1).
 
-i = 0
+i = 1
 while i <= 5: #while i in range(5):
   print(i)
   if i == 3:
