@@ -84,4 +84,4 @@ def demo_custom_exception():
 
 
 if __name__ == "__main__":
-    print(safe_divide(10, 0))
+    print(safe_division(10, 0))

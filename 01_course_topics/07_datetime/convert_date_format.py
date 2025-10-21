@@ -1,6 +1,5 @@
 from datetime import datetime, date, time, timedelta
 
-
 # Common Format Codes:
 # Code	Meaning	            Example
 # %Y	Year (4 digits)	    2025
@@ -12,7 +11,6 @@ from datetime import datetime, date, time, timedelta
 # %A	Weekday name	    Tuesday
 # %B	Month name	        October
 
-
 def print_current_datetime():
     now = datetime.now()
     print("Current Date and Time:", now)
@@ -22,7 +20,6 @@ def print_current_time():
     print("Today's Date:", today)
     current_time = datetime.now().time()
     print("Current Time:", current_time)    
-
 
 def print_specific_datetime():
     custom_date = date(2025, 12, 31)
