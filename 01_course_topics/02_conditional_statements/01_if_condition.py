@@ -20,3 +20,10 @@ if b != a:
 # If statement, without indentation (will raise an error):
 # if b == a:
 # print("b is equal to a")
+
+if b == a:
+  print("b is equal to a")
+elif b != a:
+  print("b is not equal to a")
+else:
+  print("dont not know what is happening")
