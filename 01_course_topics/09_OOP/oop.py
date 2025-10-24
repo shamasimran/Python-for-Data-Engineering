@@ -10,7 +10,7 @@ We’ll simulate an ETL (Extract, Transform, Load) pipeline:
 """
 
 from datetime import datetime
-
+import os
 
 # ---------------------------------------------------------------------
 # BASE CLASS: ETLJob
@@ -75,7 +75,7 @@ class ETLJob:
 # ---------------------------------------------------------------------
 #  CHILD CLASS #1: CSVToDBETL
 # ---------------------------------------------------------------------
-class CSVToDBETL(ETLJob):
+class CSVToDBETL(ETLJob): 
     """
     This child class inherits from ETLJob (INHERITANCE).
     It implements its own version of extract, transform, and load (POLYMORPHISM).
@@ -139,6 +139,7 @@ class APIToJSONETL(ETLJob):
 # DEMO: Running both ETL jobs
 # ---------------------------------------------------------------------
 if __name__ == "__main__":
+    os.system('cls' if os.name == 'nt' else 'clear')
     # Create ETL objects for two different data sources
     csv_etl = CSVToDBETL("CSVToDB", "users.csv", "SQLServer")
     api_etl = APIToJSONETL("APIToJSON", "https://api.weatherdata.io", "weather.json")
