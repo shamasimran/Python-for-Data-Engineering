@@ -36,5 +36,26 @@ def main():
     print(f"Pi constant: {math.pi}")
     print(f"Power: 2^3 = {math.pow(2, 3)}")
 
+def main_package():
+    from dateutil import format_date
+    from dateutil.calculator import DateCalculator
+    from datetime import datetime
+
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print("Custom Package Demo:")
+
+    # Using format_date function
+    date_obj = datetime(2024, 6, 15)
+    formatted_date = format_date(date_obj, "%B %d, %Y")
+    print(f"Formatted Date: {formatted_date}")
+
+    # Using DateCalculator class
+    date_calc = DateCalculator()
+    date1 = datetime(2024, 1, 1)
+    date2 = datetime(2024, 6, 15)
+    days_diff = date_calc.days_between(date1, date2)
+    print(f"Days between {date1.date()} and {date2.date()}: {days_diff} days")
+    
 if __name__ == "__main__":
-    main()
+    # main()
+    main_package()
