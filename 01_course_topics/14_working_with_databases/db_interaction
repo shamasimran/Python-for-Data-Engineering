@@ -1,0 +1,131 @@
+"""
+Lesson 14: Working with Databases
+---------------------------------
+In this lesson, we'll learn how to connect Python with a SQL Server database,
+create tables, insert data, query, update, and delete records.
+"""
+
+"""
+       Install pyodbc ==> 
+       run command in your console window ==>  
+       pip install pyodbc
+       
+       Make sure you have an ODBC driver installed for SQL Server ==>
+       For Windows, you can download it from ==>
+       https://learn.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver17
+"""
+
+import os
+import pyodbc
+
+# --------------------------------------------------
+# 1. Database Connection Setup
+# --------------------------------------------------
+def get_connection():
+    """Establish connection to SQL Server."""
+    try:
+        conn = pyodbc.connect(
+            "Driver={ODBC Driver 17 for SQL Server};"
+            "Server=SHAMASIMRAN;" #localhost
+            "Database=SI_Python_Test;"
+            "Trusted_Connection=yes;"
+        )
+        print("Database connection successful.")
+        return conn
+    except Exception as e:
+        print("Database connection failed:", e)
+        return None
+
+
+# --------------------------------------------------
+# 2. Create Table if not exists
+# --------------------------------------------------
+def create_table(cursor):
+    """Create a table named Employees if it doesn't exist."""
+    create_table_query = """
+    IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='Employees' AND xtype='U')
+    CREATE TABLE Employees (
+        Id INT IDENTITY(1,1) PRIMARY KEY,
+        Name NVARCHAR(100),
+        Department NVARCHAR(100),
+        Salary DECIMAL(10, 2),
+        DateJoined DATETIME DEFAULT GETDATE()
+    );
+    """
+    cursor.execute(create_table_query)
+    print("Table 'Employees' checked/created successfully.")
+
+
+# --------------------------------------------------
+# 3. Insert Data
+# --------------------------------------------------
+def insert_data(cursor):
+    """Insert sample employee records."""
+    employees = [
+        ("Ali Khan", "Engineering", 95000.00),
+        ("Sara Ahmed", "HR", 65000.00),
+        ("John Doe", "Finance", 80000.00)
+    ]
+    cursor.executemany(
+        "INSERT INTO Employees (Name, Department, Salary) VALUES (?, ?, ?);", 
+        employees
+    )
+    print(f"Inserted {cursor.rowcount} records into Employees.")
+
+
+# --------------------------------------------------
+# 4. Query Data
+# --------------------------------------------------
+def fetch_data(cursor):
+    """Fetch and display employee records."""
+    cursor.execute("SELECT Id, Name, Department, Salary FROM Employees;")
+    rows = cursor.fetchall()
+    print("\nEmployee Records:")
+    for row in rows:
+        print(f"  ID: {row.Id}, Name: {row.Name}, Dept: {row.Department}, Salary: {row.Salary}")
+
+
+# --------------------------------------------------
+# 5. Update and Delete
+# --------------------------------------------------
+def update_delete(cursor):
+    """Update and delete sample records."""
+    cursor.execute("UPDATE Employees SET Salary = Salary + 5000 WHERE Department = 'Engineering';")
+    print(f"Updated {cursor.rowcount} record(s).")
+
+    cursor.execute("DELETE FROM Employees WHERE Department = 'HR';")
+    print(f"Deleted {cursor.rowcount} record(s).")
+
+
+# --------------------------------------------------
+# 6. Main Function
+# --------------------------------------------------
+def main():
+    conn = get_connection()
+    if not conn:
+        return
+
+    # A cursor is an object used to interact with the database.
+    # It allows executing SQL queries and fetching results.
+    cursor = conn.cursor()
+    
+    try:
+        create_table(cursor)
+        insert_data(cursor)
+        fetch_data(cursor)
+        update_delete(cursor)
+        conn.commit()
+        print("\nAll database operations completed successfully.")
+    except Exception as e:
+        print("Error during database operation:", e)
+        conn.rollback()
+    finally:
+        cursor.close()
+        conn.close()
+        print("Connection closed.")
+
+
+if __name__ == "__main__":
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print(pyodbc.drivers())
+    main()
