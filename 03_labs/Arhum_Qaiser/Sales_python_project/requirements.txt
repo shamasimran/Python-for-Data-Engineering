@@ -1,0 +1,2 @@
+openpyxl==3.1.5
+pyodbc==4.0.39
