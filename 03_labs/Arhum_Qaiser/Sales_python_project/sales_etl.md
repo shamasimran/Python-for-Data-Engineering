@@ -1,7 +1,7 @@
 # Sales Data ETL Pipeline
 
 A modular **ETL (Extract, Transform, Load)** project for processing sales data from Excel files into a SQL Server database using Python.  
-The project includes structured logging, modular design, and configurable database connectivity.
+The project includes structured logging,configurable database connectivity.
 
 ---
 

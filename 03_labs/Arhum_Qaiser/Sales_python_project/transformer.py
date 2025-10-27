@@ -23,7 +23,8 @@ class transformer:
                 })
 
             except Exception as e:
-                self.logger.warning(f"Skipping transforming record {record}: {e}")
+                self.logger.warning(f"Value is missing while transforming {record}: {e}")
+                break
         
         self.logger.info(f"Successfully transformed {len(transformed_data)} records.")
         return transformed_data

@@ -42,3 +42,8 @@
 2025-10-27 15:23:43,996 - sales_ETL - INFO - Successfully connected to the database using Windows Authentication.
 2025-10-27 15:23:44,006 - sales_ETL - INFO - SalesData table is ready.
 2025-10-27 15:23:45,129 - sales_ETL - INFO - Inserted 9135 records into SalesData table.
+2025-10-27 18:45:03,675 - sales_ETL - INFO - Successfully read 9135 rows from Excel.
+2025-10-27 18:45:03,681 - sales_ETL - INFO - Successfully transformed 9135 records.
+2025-10-27 18:45:03,856 - sales_ETL - INFO - Successfully connected to the database using Windows Authentication.
+2025-10-27 18:45:03,902 - sales_ETL - INFO - SalesData table is ready.
+2025-10-27 18:45:05,009 - sales_ETL - INFO - Inserted 9135 records into SalesData table.
