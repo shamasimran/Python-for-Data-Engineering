@@ -1,4 +1,3 @@
-# main.py
 from extractor import extractor
 from transformer import transformer
 from loader import loader
