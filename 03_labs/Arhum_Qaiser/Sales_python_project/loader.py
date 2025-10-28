@@ -20,6 +20,16 @@ class loader:
         except Exception as e:
             self.logger.error(f"Database connection failed: {e}")
             return None
+    
+    def delete_table(self, conn):
+        drop_table_query = "DROP TABLE IF EXISTS Sales"
+        try:
+            cursor = conn.cursor()
+            cursor.execute(drop_table_query)
+            conn.commit()
+            self.logger.info("Sales table dropped successfully.")
+        except Exception as e:
+            self.logger.error(f"Failed to drop table: {e}")    
 
     def create_and_insert(self, conn, records):
         create_table_query = """
